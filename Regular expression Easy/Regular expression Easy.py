@@ -5,9 +5,9 @@ import re
 
 text = "Почты моих сотрудников artem@mail.ru, proger328@gmail.com и ermilov1@yandex.ru. И мой mail:glava@edu.itmo.ru"
 posts = []
-for match in re.finditer(r""" (?P<name>[a-zA-Z0-9.]+)      
-                   @(?P<secondlevelDomain>[a-zA-Z.]+)      
-                   (\.(?P<toplevelDomain>[a-zA-Z]+))       
+for match in re.finditer(r""" (?P<name>[a-zA-Z0-9.]+)      #Имя почтового ящика
+                   @(?P<secondlevelDomain>[a-zA-Z.]+)      #Домен второго уровня
+                   (\.(?P<toplevelDomain>[a-zA-Z]+))       #Домен верхнего уровня
                    """, 
                    text, re.VERBOSE):
     posts.append(match)
