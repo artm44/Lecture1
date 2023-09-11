@@ -3,7 +3,7 @@
 
 import re
 
-text = "Почты моих сотрудников artem@mail.ru, proger328@gmail.com и ermilov1@yandex.ru. И мой mail:glava@edu.itmo.ru или на @yandex.ru"
+text = input("Введите текст:\n")
 posts = []
 for match in re.finditer(r""" (?P<name>[a-zA-Z0-9.]+)      #Имя почтового ящика
                    @(?P<secondlevelDomain>[a-zA-Z.]+)      #Домен второго уровня
